@@ -1,0 +1,15 @@
+﻿@using Student.Models
+@{
+    ViewBag.Title = "Details";
+}
+
+@if (ViewBag.activeStudent == null)
+{
+    <div class="alert">
+        <span class="alert-danger">@ViewBag.Error</span>
+    </div>
+}
+else
+{
+    <h2>@ViewBag.activeStudent.Name</h2>
+}

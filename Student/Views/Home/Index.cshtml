@@ -1,0 +1,32 @@
+﻿@using Student.Models
+@{ 
+    ViewBag.Title = "Home Page";
+}
+<table class="table table-bordered table-hover" >
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Surname</th>
+            <th>Phone</th>
+            <th>Group Name</th>
+            <th>View</th>
+            <th>Edit</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var st in ViewBag.allStudents)
+        {
+        <tr>
+
+            <td>@st.Name @st.Surname</td>
+            <td>@st.email</td>
+            <td>@st.phone</td>
+            <td>@st.Group.name</td>
+            <td><a href="/Home/Details/@st.id">View</a></td>
+            <td><a href="/Home/Details/@st.id">Edit</a></td>
+
+        </tr>
+        }
+    </tbody>
+
+</table>
